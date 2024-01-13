@@ -22,8 +22,9 @@
 }
 
 img{
-    max-width: 100%;
-    height: auto;
+    max-inline-size: 100%;
+    max-block-size: auto;
+
 }
 
 body{
@@ -38,22 +39,47 @@ body{
 
 .container{
     max-width: min(90%, 23.125rem);
+    margin: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media screen  and (min-width: 48rem){
+    .container{
+        max-width: min(90%, 56.25rem);
+        margin: 0;
+        flex-direction: row;
+    }
 }
 
 .cards{
-    background-color: red;
-    padding: 1rem 4rem;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
 }
 
+
 .item-card{
+    padding: 1rem 2rem;
+    padding-bottom: 3rem;
     display: flex;
     flex-direction: column;
     gap:1.5rem;
 }
 
+
+
+@media screen  and (min-width: 48rem){
+    .cards{
+        flex-direction: row;
+    }
+
+    .item-card{
+        flex-basis: 33%;
+        padding: 4rem 2rem;
+        justify-content: space-between;
+    }
+}
 
 .item-card h1{
     color: var(--very-light-gray);
@@ -78,5 +104,54 @@ body{
     background-color: var(--very-light-gray);
     font-family: var(--font-secondary);
     font-weight: 400;
+}
+
+
+.orange-color{
+    border-radius: 1rem 1rem 0 0;
+    background-color: var(--bright-orange);
+}
+
+
+.orange-color .btn{
+    color: var(--bright-orange);
+}
+
+
+.cyan-color{
+    background-color: var(--dark-cyan);
+}
+
+.cyan-color .btn{
+    color: var(--dark-cyan);
+}
+
+.dark-cyan-color{
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 1rem 1rem;
+}
+
+
+.dark-cyan-color .btn{
+    color: var(--very-dark-cyan);
+}
+
+
+.item-card .btn:hover{
+    cursor: pointer;
+    color:var(--transparent-white);
+    background-color: inherit;
+    outline: 2px solid var(--transparent-white);
+}
+
+
+@media screen  and (min-width: 48rem){
+    .orange-color{
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .dark-cyan-color{
+        border-radius: 0 1rem 1rem 0;
+    }
 
 }
