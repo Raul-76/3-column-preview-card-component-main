@@ -48,7 +48,6 @@ body{
 @media screen  and (min-width: 48rem){
     .container{
         max-width: min(90%, 56.25rem);
-        margin: 0;
         flex-direction: row;
     }
 }
