@@ -34,25 +34,12 @@ body{
     justify-content: center;
     align-items: center;
     background-color: var(--very-light-gray);
-}
-
-
-.container{
-    max-width: min(90%, 23.125rem);
-    margin: .5rem;
-    display: flex;
-    flex-direction: column;
-}
-
-
-@media screen  and (min-width: 48rem){
-    .container{
-        max-width: min(90%, 56.25rem);
-        flex-direction: row;
-    }
+    padding: .5rem;
 }
 
 .cards{
+    margin: auto;
+    max-width: min(90%, 23.125rem);
     display: flex;
     flex-direction: column;
 }
@@ -70,6 +57,7 @@ body{
 
 @media screen  and (min-width: 48rem){
     .cards{
+        max-width: min(90%, 56.25rem);
         flex-direction: row;
     }
 
@@ -80,7 +68,7 @@ body{
     }
 }
 
-.item-card h1{
+.item-card h2{
     color: var(--very-light-gray);
     font-size: 2.625rem;
     text-transform: uppercase;
@@ -97,12 +85,12 @@ body{
 
 .item-card .btn{
     width: fit-content;
-    border: none;
     border-radius: 2rem;
     padding:1rem 2rem;
     background-color: var(--very-light-gray);
     font-family: var(--font-secondary);
     font-weight: 400;
+    text-decoration: none;
 }
 
 
@@ -137,7 +125,6 @@ body{
 
 
 .item-card .btn:hover{
-    cursor: pointer;
     color:var(--transparent-white);
     background-color: inherit;
     outline: 2px solid var(--transparent-white);
